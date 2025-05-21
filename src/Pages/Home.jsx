@@ -81,7 +81,7 @@ const WORDS = ["Software Engineering Undergraduate", "Mern Enthusiast"];
 const TECH_STACK = ["MongoDB", "Express.js", "React.js", "Node.js"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/KanujanS" },
-  { icon: Linkedin, link: "linkedin.com/in/kanujan-subakaran-156339292" },
+  { icon: Linkedin, link: "https://www.linkedin.com/in/kanujan-subakaran-156339292/" },
   { icon: Instagram, link: "https://www.instagram.com/ekizr_/?hl=id" }
 ];
 
