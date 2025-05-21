@@ -3,19 +3,17 @@ import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles } from "lucid
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import profileImg from '../assets/PROFILE.png';
 
 // Memoized Components
 const StatusBadge = memo(() => (
   <div className="inline-block animate-float lg:mx-0" data-aos="zoom-in" data-aos-delay="400">
-    <div className="relative group">
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
-      <div className="relative px-3 sm:px-4 py-2 rounded-full bg-black/40 backdrop-blur-xl border border-white/10">
-        <span className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-transparent bg-clip-text sm:text-sm text-[0.7rem] font-medium flex items-center">
-          <Sparkles className="sm:w-4 sm:h-4 w-3 h-3 mr-2 text-blue-400" />
-          Ready to Innovate
+      <div className="absolute bg-gradient-to-r from-[#6366f1] to-[#a855f7]  opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+      <div className="pl-1 py-2">
+        <span className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-transparent bg-clip-text sm:text-xl text-[0.7rem] font-medium flex items-center">
+          I'm Kanujan Subakaran,
         </span>
       </div>
-    </div>
   </div>
 ));
 
@@ -82,7 +80,7 @@ const TECH_STACK = ["MongoDB", "Express.js", "React.js", "Node.js"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/KanujanS" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/kanujan-subakaran-156339292/" },
-  { icon: Instagram, link: "https://www.instagram.com/ekizr_/?hl=id" }
+  { icon: Instagram, link: "https://www.instagram.com/kanujan_sk?igsh=a2xoMWhjMHJrbm5v&utm_source=qr" }
 ];
 
 const Home = () => {
@@ -159,7 +157,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#030014] overflow-hidden" id="Home">
+    <div className=" flex flex-col min-h-screen bg-[#030014] overflow-hidden" id="Home">
       <div className={`relative z-10 transition-all duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
         <div className="container mx-auto px-[5%] sm:px-6 lg:px-[0%] min-h-screen">
           <div className="flex flex-col lg:flex-row items-center justify-center h-screen md:justify-between gap-0 sm:gap-12 lg:gap-20">
@@ -183,7 +181,7 @@ const Home = () => {
                 <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Menciptakan Website Yang Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital.
+                  Enthusiastic and dedicated aspiring Software Engineer with a solid understanding of full-stack development.
                 </p>
 
                 {/* Tech Stack */}
@@ -207,35 +205,10 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
-            {/* Right Column - Optimized Lottie Animation */}
-            <div className="w-full py-[10%] sm:py-0 lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-              data-aos="fade-left"
-              data-aos-delay="600">
-              <div className="relative w-full opacity-90">
-                <div className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ease-in-out ${
-                  isHovering ? "opacity-50 scale-105" : "opacity-20 scale-100"
-                }`}>
-                </div>
-
-                <div className={`relative z-10 w-full opacity-90 transform transition-transform duration-500 ${
-                  isHovering ? "scale-105" : "scale-100"
-                }`}>
-                  <DotLottieReact {...lottieOptions} />
-                </div>
-
-                <div className={`absolute inset-0 pointer-events-none transition-all duration-700 ${
-                  isHovering ? "opacity-50" : "opacity-20"
-                }`}>
-                  <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-3xl animate-[pulse_6s_cubic-bezier(0.4,0,0.6,1)_infinite] transition-all duration-700 ${
-                    isHovering ? "scale-110" : "scale-100"
-                  }`}>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Right Column - Profile Image */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2" data-aos="fade-left" data-aos-delay="400">
+            <img src={profileImg} alt="Profile_Image" className="hidden lg:block w-100 h-auto" />
+          </div>
           </div>
         </div>
       </div>
