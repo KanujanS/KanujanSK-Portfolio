@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, memo } from "react"
-import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles } from "lucide-react"
+import { Github, Linkedin, Mail, ExternalLink, Instagram} from "lucide-react"
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -207,7 +207,7 @@ const Home = () => {
             </div>
             {/* Right Column - Profile Image */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2" data-aos="fade-left" data-aos-delay="400">
-            <img src={profileImg} alt="Profile_Image" className="hidden lg:block w-100 h-auto" />
+            <img src={profileImg} alt="Profile_Image" className="w-100 h-auto" />
           </div>
           </div>
         </div>
